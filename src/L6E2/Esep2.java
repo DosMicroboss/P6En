@@ -117,18 +117,15 @@ public class Esep2 {
 
         TradingRobot robot1 = new TradingRobot("AutoBot", 90, 150);
 
-        // Подписки
         exchange.subscribe("AAPL", trader1);
         exchange.subscribe("AAPL", robot1);
         exchange.subscribe("GOOG", trader2);
         exchange.subscribe("GOOG", robot1);
 
-        // Имитация торгов
         exchange.setStockPrice("AAPL", 120);
         exchange.setStockPrice("AAPL", 85);
         exchange.setStockPrice("GOOG", 160);
 
-        // Отписка
         exchange.unsubscribe("AAPL", trader1);
 
         exchange.setStockPrice("AAPL", 200);
